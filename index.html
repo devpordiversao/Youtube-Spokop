@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spokpok | Scripts Roblox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }body {
+        background: #0f0f0f;
+        color: #ffffff;
+    }
+
+    header {
+        background: linear-gradient(135deg, #000000, #1a1a1a);
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    header img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        border: 4px solid #f1c40f;
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        color: #f1c40f;
+    }
+
+    header p {
+        margin-top: 10px;
+        font-size: 1.1rem;
+        color: #cccccc;
+    }
+
+    nav {
+        background: #000000;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav a {
+        color: #f1c40f;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        padding: 50px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    section h2 {
+        color: #f1c40f;
+        margin-bottom: 20px;
+        font-size: 2rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+    }
+
+    .card h3 {
+        color: #f1c40f;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        background: #000000;
+        text-align: center;
+        padding: 20px;
+        color: #888888;
+        margin-top: 40px;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 25px;
+        background: #f1c40f;
+        color: #000000;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .btn:hover {
+        background: #d4ac0d;
+    }
+</style>
+
+</head>
+<body><header>
+    <!-- Coloque a imagem enviada como: logo.png -->
+    <img src="https://i.imgur.com/HPqnb4t.jpeg" alt="Logo Spokpok" />
+    <h1>Spokpok</h1>
+    <p>Scripts Roblox • Tutoriais • Conteúdo Avançado</p>
+    <a class="btn" href="https://m.youtube.com/@SpokeasMine" target="_blank">Inscreva-se no YouTube</a>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#scripts">Scripts</a>
+    <a href="#executores">Executores</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre o Canal</h2>
+    <p>
+        O canal <strong>Spokpok</strong> é focado em scripts Roblox, desde scripts básicos
+        até sistemas avançados. Aqui você aprende, testa e evolui como programador no Roblox Studio.
+    </p>
+</section>
+
+<section id="scripts">
+    <h2>Scripts</h2>
+
+    <style>
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab-btn { padding: 10px 16px; background:#1a1a1a; color:#f1c40f; border-radius:8px; cursor:pointer; font-weight:bold; }
+        .tab-btn.active { background:#f1c40f; color:#000; }
+        .tab-content { display:none; }
+        .tab-content.active { display:block; }
+        .code-box { background:#0b0b0b; border:1px solid #222; border-radius:10px; padding:16px; position:relative; }
+        .code-box pre { white-space: pre-wrap; word-break: break-word; color:#e6e6e6; font-family: Consolas, monospace; font-size:0.9rem; }
+        .copy-btn { position:absolute; top:12px; right:12px; padding:8px 12px; background:#f1c40f; color:#000; border-radius:6px; cursor:pointer; font-weight:bold; }
+        .badge { display:inline-block; padding:4px 8px; border-radius:6px; font-size:0.75rem; margin-left:8px; }
+        .badge.warn { background:#c0392b; }
+        .badge.info { background:#2980b9; }
+        .script-card { margin-bottom:24px; }
+    </style>
+
+    <div class="tabs">
+        <div class="tab-btn active" onclick="openTab('blox')">Blox Fruits</div>
+        <div class="tab-btn" onclick="openTab('anime')">Anime / Outros</div>
+        <div class="tab-btn" onclick="openTab('universal')">Universal</div>
+    </div>
+
+    <!-- BLOX FRUITS -->
+    <div id="blox" class="tab-content active">
+        <div class="script-card">
+            <h3>Redz Hub</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('redz')">Copiar</button>
+                <pre id="redz">loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()</pre>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Blox Fruits - Koatta</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('koatta')">Copiar</button>
+                <pre id="koatta">loadstring(game:HttpGet("https://raw.githubusercontent.com/KOBENFF/sdfd/refs/heads/main/Koatta.txt"))()</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANIME / OUTROS -->
+    <div id="anime" class="tab-content">
+        <div class="script-card">
+            <h3>Volleybal Legends</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('volley')">Copiar</button>
+                <pre id="volley">--[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptshubzeck/Zeckhubv1/refs/heads/main/zeckhub"))()</pre> </div> </div>
+
+<div class="script-card">
+            <h3>Forge <span class="badge warn">Not Working</span></h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('forge')">Copiar</button>
+                <pre id="forge">loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/fda9babd071d6b536a745774b6bc681c.lua"))()</pre>
+            </div>
+        </div>
+
+        <div class="script-card">
+            <h3>Prison Life</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('prison')">Copiar</button>
+                <pre id="prison">--[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/qAxAp/Lynix/refs/heads/main/Lynix"))()</pre> </div> </div>
+
+<div class="script-card">
+            <h3>[🎄] 99 Nights in the Forest 🔦 <span class="badge info">Executores limitados</span></h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('forest')">Copiar</button>
+                <pre id="forest">script_key = "Add key here to auto verify"
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/2529a5f9dfddd5523ca4e22f21cceffa.lua"))()</pre> </div> <p>Não suporta executores tier 3. Somente: xeno, solara e jjsploit.</p> </div>
+
+<div class="script-card">
+            <h3>Rivals (Skin Changer)</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('rivals')">Copiar</button>
+                <pre id="rivals">--[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gwnrdt/Games/refs/heads/main/Rivals-Skin-Changer.lua"))()</pre> </div> </div> </div>
+
+<!-- UNIVERSAL -->
+    <div id="universal" class="tab-content">
+        <div class="script-card">
+            <h3>Express Hub Free (Universal)</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('express')">Copiar</button>
+                <pre id="express">--[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]]
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d8824b23a4d9f2e0d62b4e69397d206b.lua"))()</pre> </div> </div>
+
+<div class="script-card">
+            <h3>Chaos Hub</h3>
+            <div class="code-box">
+                <button class="copy-btn" onclick="copyCode('chaos')">Copiar</button>
+                <pre id="chaos">--[[ WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk! ]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Cat558-uz/Chaos-Hub-no-key-2025/refs/heads/main/%20chaos%20hub%20no%20key%202025.txt"))()</pre> </div> </div> </div>
+
+<script>
+        function openTab(id){
+            document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+        function copyCode(id){
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text);
+            alert('Script copiado!');
+        }
+    </script>
+</section>
+
+<section id="executores">
+    <h2>Executores</h2>
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://i.imgur.com/Vqw2jAr.jpeg" alt="Delta Executor" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Delta Executor</h3>
+            <p>Executor popular para mobile.</p>
+            <a class="btn" href="https://deltaexploits.gg/delta-executor-android" target="_blank">Android</a>
+            <a class="btn" href="https://deltaexploits.gg/delta-executor-ios" target="_blank">iOS</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/8gc7AUG.png" alt="Codex Executor" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Codex Executor</h3>
+            <p>Executor leve e eficiente.</p>
+            <a class="btn" href="https://codex.lol/" target="_blank">Download Oficial</a>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/Srd5GIZ.jpeg" alt="Solara Executor" style="width:100%; border-radius:8px; margin-bottom:10px;">
+            <h3>Solara Executor</h3>
+            <p>Executor moderno com boa performance.</p>
+            <a class="btn" href="https://getsolara.dev/" target="_blank">Download Oficial</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Email: zocolirafael56@gmail.com</p>
+    <p>Discord: slknumcompensa0743</p>
+</section>
+
+<footer>
+    <p>© 2025 Spokpok - Todos os direitos reservados.</p>
+</footer>
+
+</body>
+  </html>
